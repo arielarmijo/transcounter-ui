@@ -1,0 +1,8 @@
+<mat-nav-list>
+    <a mat-list-item *ngFor="let item of menuItems"
+       [routerLink]="'/'+item.page" routerLinkActive="active"
+       (click)="onClick($event)">
+      <mat-icon>{{item.icon}}</mat-icon>
+      <span>{{ item.page | titlecase }}</span>
+    </a>
+</mat-nav-list>

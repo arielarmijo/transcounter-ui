@@ -1,0 +1,14 @@
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.full-width-table {
+  width: 100%;
+  overflow-x: scroll !important;
+}
+
+mat-icon {
+  cursor: pointer;
+  margin-right: 0.75rem;
+}

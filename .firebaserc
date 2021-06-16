@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "transcounter": {
+      "hosting": {
+        "transcounter-ui": [
+          "transcounter"
+        ]
+      }
+    }
+  }
+}

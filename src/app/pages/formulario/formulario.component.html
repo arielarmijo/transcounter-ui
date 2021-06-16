@@ -1,0 +1,78 @@
+<mat-card class="shipping-card">
+    
+    <mat-card-header>
+        <mat-card-title>Datos de prueba</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+        <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+
+            <mat-grid-list cols="2" rowHeight="75px" gutterSize="15px">
+
+                <mat-grid-tile colspan="1" rowspan="4">
+                    <app-mapa (position)="updatePosition($event)"></app-mapa>
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="1" rowspan="1">
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Linea</mat-label>
+                        <input matInput type="text" formControlName="line">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill"  class="full-width">
+                        <mat-label>Direccion</mat-label>
+                        <mat-select formControlName='direction'>
+                            <mat-option value="ida">Ida</mat-option>
+                            <mat-option value="regreso">Regreso</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="1" rowspan="1">
+                    <mat-form-field appearance="fill"  class="full-width">
+                        <mat-label>Bus</mat-label>
+                        <input matInput type="text" formControlName="bus">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="1" rowspan="1">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Personas entrada</mat-label>
+                        <input matInput type="number" formControlName="passengersIn">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Personas salida</mat-label>
+                        <input matInput type="number" formControlName="passengersOut">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="1" rowspan="1">
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" type="submit">Enviar</button>
+                    </mat-card-actions>
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="1" rowspan="1">
+                    <div formGroupName="position">
+                        <mat-label>Posicion</mat-label>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Latitud</mat-label>
+                            <input matInput type="text" formControlName="latitude">
+                        </mat-form-field>
+                        <mat-label> ; </mat-label>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Longitud</mat-label>
+                            <input matInput type="text" formControlName="longitude">
+                        </mat-form-field>
+                    </div>
+                </mat-grid-tile> 
+
+                
+
+            </mat-grid-list>
+
+        </form>
+
+    </mat-card-content>
+
+</mat-card>
