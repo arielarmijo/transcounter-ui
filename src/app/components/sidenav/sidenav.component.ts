@@ -9,6 +9,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class SidenavComponent {
 
+  panelOpenState = false;
   @Output() clicked = new EventEmitter<boolean>();
 
   menuItems = [

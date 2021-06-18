@@ -25,6 +25,8 @@ import { AnnualSalesChartComponent } from './components/charts/annual-sales-char
 import { StoreSessionsChartComponent } from './components/charts/store-sessions-chart/store-sessions-chart.component';
 import { CardComponent } from './components/card/card.component';
 import { MiniCardComponent } from './components/mini-card/mini-card.component';
+import { LinesTreeComponent } from './components/lines-tree/lines-tree.component';
+import { BusDashboardComponent } from './pages/bus-dashboard/bus-dashboard.component';
 
 
 
@@ -43,7 +45,9 @@ import { MiniCardComponent } from './components/mini-card/mini-card.component';
     AnnualSalesChartComponent,
     StoreSessionsChartComponent,
     CardComponent,
-    MiniCardComponent
+    MiniCardComponent,
+    LinesTreeComponent,
+    BusDashboardComponent
   ],
   imports: [
     BrowserModule,
